@@ -1,2 +1,0 @@
-# Quotify
- Quote generator
