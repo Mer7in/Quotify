@@ -23,7 +23,7 @@ body::before {
       rgba(0, 0, 0, 0.6),
       rgba(255, 255, 255, 0.3)
     ),
-    url("https://mer7in.github.io/Quotify/images/joey-kyber-GPxgi4J82E4-unsplash.jpg");
+    url("https://mer7in.github.io/Quotify/images/panuson-norkaew-3ot8O0t5beE-unsplash.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -92,7 +92,6 @@ h2 {
   border-radius: 20px 20px 0 0;
   z-index: 1000;
 }
-
 
 .card-footer {
   padding: 20px;
