@@ -7,6 +7,11 @@
   font-family: "Raleway", sans-serif;
 }
 
+#root{
+  display: flex;
+  justify-content: center;
+}
+
 body::before {
   content: "";
   position: fixed;
@@ -23,17 +28,10 @@ body::before {
       rgba(0, 0, 0, 0.6),
       rgba(255, 255, 255, 0.3)
     ),
-    url("https://mer7in.github.io/Quotify/images/maksym-sirman-lEuxYh1kftg-unsplash.jpg");
+    url("https://mer7in.github.io/quotify/images/cesar-couto-UeBFFAPwuj8-unsplash.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-}
-
-body {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 h2 {
@@ -46,16 +44,12 @@ h2 {
   font-size: 1.2em;
 }
 
-/* #main::after{
-    content: '';
-    top:0;
-    left:0;
-    ;
-    position: relative;
-    z-index: -1;
-    background-color: lightblue;
-    
-} */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
 
 #main .card .card-header {
   padding: 20px;
