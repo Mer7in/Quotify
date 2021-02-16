@@ -5,7 +5,7 @@ import "../App.css";
 export default function QuoteCard(props) {
   const { quote, generateRandomQuote, copyToClipboard } = props;
   return (
-    <div className="card">
+    <div className="card" id="quote-box">
       <div className="card-header">
         <h2>The Random Quote Machine</h2>
       </div>
@@ -14,7 +14,7 @@ export default function QuoteCard(props) {
           <span className="icon">
             <i className="fa fa-quote-left"></i>
           </span>
-          <p className="quote" id="quote">
+          <p className="quote" id="text">
             {quote.quote}
           </p>
         </div>
@@ -26,12 +26,8 @@ export default function QuoteCard(props) {
             <a
               className={"twitter-share-button"}
               style={{ cursor: "pointer" }}
-              onClick={() => {
-                window.open(
-                  "https://twitter.com/intent/tweet/?text=" +
-                    encodeURIComponent(quote.quote + "\n\n" + quote.author)
-                );
-              }}
+              href=""
+              id="tweet-quote"
             >
               <i className={"fa fa-twitter"} />
             </a>
@@ -39,7 +35,7 @@ export default function QuoteCard(props) {
           <div className="btn">
             <a
               onClick={(e) => generateRandomQuote(quotes, e)}
-              id="quote-btn"
+              id="new-quote"
               style={{ cursor: "pointer" }}
             >
               New Quote
@@ -51,7 +47,7 @@ export default function QuoteCard(props) {
               className="fas fa-copy"
               style={{ cursor: "copy" }}
               onClick={() => {
-                copyToClipboard()
+                copyToClipboard();
               }}
             ></a>
           </div>

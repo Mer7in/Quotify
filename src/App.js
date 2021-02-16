@@ -8,16 +8,27 @@ const randomizer = (elem) => {
   let random = Math.floor(Math.random() * elem.length);
   return random;
 };
+const random = randomizer(quotes);
 
 export default class App extends Component {
   state = {
-    quote: quotes[0].quote,
-    author: quotes[0].author,
+    quote: quotes[random].quote,
+    author: quotes[random].author,
   };
 
   copyToClipboard = (e) => {
     navigator.clipboard.writeText(this.state.quote);
   };
+
+  componentDidMount() {
+    //setInterval(()=>{console.log('jeamik')}, 30000);
+    //window.getComputedStyle(document.body,"::before").backgroundImage ='linear-gradient( 115deg,rgba(255, 255, 255, 0.3),rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.6),rgba(255, 255, 255, 0.3)),url("https://raw.githubusercontent.com/Mer7in/quotify/React-version/src/assets/images/img1.jpg")';
+    //console.log(elem);
+    const elem = document.getElementById("tweet-quote");
+    elem.href =
+      "https://twitter.com/intent/tweet/?text=" +
+      encodeURIComponent(this.state.quote + "\n\n" + this.state.author);
+  }
 
   generateRandomQuote = (arr, e) => {
     e.preventDefault();
